@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Resume - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/resume.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <!-- 
+      <span class="d-block d-lg-none">Rose Chakkoria & Haylye Plaster</span>
+      -->
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/img/AZshape.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Tech Stack</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        
+        <h1 class="mb-0">Population & Voting Trends (Arizona) 
+          <!---
+          <span class="text-primary">Haylye Plaster</span>
+          -->
+        </h1>
+        
+        <div class="subheading mb-5">Rose Chakkoria & Haylye Plaster
+          
+        </div>
+        
+        <p class="lead mb-5">This is a study of voting trends of Arizona and it's population demographics</p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Report</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <img class="img-fluid img-profile mx-auto mb-2" src="../static/img/RepDemYear.png" alt="Voting graph">
+                </div>
+                <div class="col-md-6">
+          <img class="img-fluid img-profile mx-auto mb-2" src="../static/img/PopulationByRace.png" alt="Population graph">
+
+      
+        </div>
+        </div>
+        <div class="row">
+        <p>This website is made to display the ETL capabilities of Haylye Plaster and Rose Chakkoria. This site is made specifically to bring data together and tell a story. The data you see on the ETL project overview is comprised of historic data of Arizona’s population and Arizona political trends. We wanted to see if there was a correlation between population increase and voter behavior in general presidential elections. </p>
+
+        <div class="row">
+            <p>Voting Data : https://en.wikipedia.org/wiki/Arizona<br/>Population & Demographic Data : http://www.censusscope.org/</p> 
+          </div>
+
+
+      </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Data</h2>
+        <p class="lead mb-5">This data is pulled from Mongo DB using Flask</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+        <table>
+            {{data.cdata|safe}}
+            </table>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Tech Stack</h2>
+        <p>
+            We took data from and censusscope.org to retrieve the data we needed. The only issue we saw with our data was the credibility of Wikipedia as a source, with that we cross-referenced it with a highly respected website usaelctionatlas.org to confirm the accuracy of the data. After confirming accuracy we used <strong> PANDAS</strong> to scrap the data from the two websites and transformed it into tables using <strong>PYTHON</strong>. To properly join the data sets we needed to transform the population and population by ethnicity to match the years in the political trend data table, we did this by utilizing the average function in <strong> EXCEL </strong> to produce election years in our population data.
+        </p>
+        <p>
+            Once all the data was transformed we choose to send our data to a <strong>MONGO DB</strong> in order to later use <strong> FLASK</strong>  for the <strong>HTML</strong> portion to tell the story of Arizona’s population growth and political development. Furthermore, to show the data we decided on two charts to best show the data, creating one on political trends (line chart) and one on population growth, broken down by ethnicity(stacked bar chart). 
+        </p>
+        <p>
+            Once the data was sent to a <strong>MONGO DB</strong>, we shifted to built out the bones of the <strong>HTML</strong>. We used <strong>bootstrap</strong> in order to get the HTML to fit our vision for how to best tell the story of Arizona’s population growth and political development. Through <strong>bootstrap</strong>, we were able to gain those bare bones and develop the web page further to best fit our needs. Furthermore, in order to display the data scraped from the websites above, it was necessary to create a Flask application which launched the HTML page. 
+
+        </p>
+        
+    </section>
+
+    <hr class="m-0">
+
+ 
+    <hr class="m-0">
+
+
+
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../static/js/resume.min.js"></script>
+
+</body>
+
+</html>
